@@ -4,7 +4,7 @@ import StartGameScreen from './screens/StartGameScreen';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useEffect, useState } from 'react';
 import GameScreen from './screens/GameScreen';
-import Colors from './assets/colorsConstants';
+import Colors from './assets/colorsConstants.ios';
 import GameOverScreen from './screens/GameOverScreen';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
@@ -35,7 +35,7 @@ export default function App() {
 
   const startNewGameHandler = () => {
     setUserNumber(undefined);
-    setGuesses(0)
+    setGuesses(0);
   };
 
   if (userNumber) {

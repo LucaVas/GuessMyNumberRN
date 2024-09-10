@@ -1,6 +1,8 @@
 import { PropsWithChildren, useState } from 'react';
-import { View, StyleSheet, Text, Pressable } from 'react-native';
-import Colors from '../assets/colorsConstants';
+import { View, StyleSheet, Text, Pressable, Dimensions } from 'react-native';
+import Colors from '../assets/colorsConstants.ios';
+
+const windowWidth = Dimensions.get('window').width;
 
 function GuessText({ children }: PropsWithChildren) {
   return (
@@ -14,15 +16,15 @@ const styles = StyleSheet.create({
   container: {
     borderWidth: 4,
     borderColor: Colors.grey100,
-    padding: 24,
-    margin: 24,
+    padding: windowWidth < 380 ? 12 : 24,
+    margin: windowWidth < 380 ? 12 : 24,
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
   },
   title: {
     fontWeight: 'bold',
-    fontSize: 36,
+    fontSize: windowWidth < 380 ? 28 : 36,
     color: Colors.grey100,
   },
 });

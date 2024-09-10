@@ -1,5 +1,5 @@
 import { StyleSheet, Text } from 'react-native';
-import Colors from '../assets/colorsConstants';
+import Colors from '../assets/colorsConstants.ios';
 import { PropsWithChildren } from 'react';
 import type { TextStyle } from 'react-native';
 
@@ -7,7 +7,10 @@ type InstructionTextProps = {
   style?: TextStyle;
 };
 
-function InstructionText({ children, style }: PropsWithChildren<InstructionTextProps>) {
+function InstructionText({
+  children,
+  style,
+}: PropsWithChildren<InstructionTextProps>) {
   return <Text style={[styles.instructionText, style]}>{children}</Text>;
 }
 

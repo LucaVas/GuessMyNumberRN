@@ -1,6 +1,8 @@
-import { View, StyleSheet } from 'react-native';
-import Colors from '../assets/colorsConstants';
+import { View, StyleSheet, Dimensions } from 'react-native';
+import Colors from '../assets/colorsConstants.ios';
 import { PropsWithChildren } from 'react';
+
+const windowWidth = Dimensions.get('window').width;
 
 function Card({ children }: PropsWithChildren) {
   return <View style={styles.container}>{children}</View>;
@@ -9,7 +11,7 @@ function Card({ children }: PropsWithChildren) {
 const styles = StyleSheet.create({
   container: {
     padding: 16,
-    marginTop: 36,
+    marginTop: windowWidth < 380 ? 18 : 36,
     marginHorizontal: 20,
     borderRadius: 8,
 

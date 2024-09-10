@@ -1,6 +1,6 @@
 import { PropsWithChildren, useState } from 'react';
 import { View, StyleSheet, Text, Pressable } from 'react-native';
-import Colors from '../assets/colorsConstants';
+import Colors from '../assets/colorsConstants.ios';
 
 type GuessLogItemProps = {
   roundNumber: number;
@@ -31,17 +31,17 @@ const styles = StyleSheet.create({
     width: '100%',
     elevation: 4,
     shadowColor: 'black',
-    shadowOffset: {width: 0, height: 0},
+    shadowOffset: { width: 0, height: 0 },
     shadowOpacity: 0.25,
-    shadowRadius: 3
+    shadowRadius: 3,
   },
   text: {
-    fontFamily: 'open-sans'
+    fontFamily: 'open-sans',
   },
   guess: {
     fontFamily: 'open-sans-bold',
-    color: Colors.blue800
-  }
+    color: Colors.blue800,
+  },
 });
 
 export default GuessLogItem;

@@ -1,6 +1,6 @@
 import { PropsWithChildren, useState } from 'react';
 import { View, StyleSheet, Text, Pressable } from 'react-native';
-import Colors from '../assets/colorsConstants';
+import Colors from '../assets/colorsConstants.ios';
 
 type PrimaryButtonProps = {
   onPress: () => void;
@@ -44,11 +44,11 @@ const styles = StyleSheet.create({
     elevation: 2,
     borderRadius: 5,
     width: '100%',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   buttonText: {
     fontWeight: 'bold',
-    fontSize: 17
+    fontSize: 17,
   },
   pressedButton: {
     backgroundColor: Colors.grey300,

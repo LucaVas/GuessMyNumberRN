@@ -1,6 +1,6 @@
-import { PropsWithChildren, useState } from 'react';
-import { View, StyleSheet, Text, Pressable } from 'react-native';
-import Colors from '../assets/colorsConstants';
+import { PropsWithChildren } from 'react';
+import { View, StyleSheet, Text, Platform } from 'react-native';
+import Colors from '../assets/colorsConstants.ios';
 
 function PrimaryButton({ children }: PropsWithChildren) {
   return <Text style={styles.title}>{children}</Text>;
@@ -8,14 +8,16 @@ function PrimaryButton({ children }: PropsWithChildren) {
 
 const styles = StyleSheet.create({
   title: {
+    width: 300,
+    maxWidth: '80%',
     fontFamily: 'open-sans-bold',
-    width: '100%',
     padding: 16,
     fontSize: 25,
     color: Colors.blue400,
     borderWidth: 2,
     borderColor: Colors.blue400,
     textAlign: 'center',
+    borderRadius: 5,
   },
 });
 
